@@ -11,6 +11,27 @@ spring:
     database: ${SPRING_JPA_DATABASE}
     hibernate:
       ddl-auto: create
+  kafka:
+    bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS}
+    consumer:
+      group-id: ${KAFKA_CONSUMER_GROUP_ID}
+      max-poll-records: ${KAFKA_CONSUMER_MAX_POLL_RECORDS}
+    topic:
+      updating_tasks: ${KAFKA_TOPIC_UPDATING_TASKS}
+    listener:
+      poll-timeout: ${KAFKA_LISTENER_POLL_TIMEOUT}
+
+  mail:
+    host: ${MAIL_HOST}
+    port: ${MAIL_PORT}
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: ${MAIL_PROPERTIES_MAIL_SMTP_AUTH}
+          starttls:
+            enable: ${MAIL_PROPERTIES_MAIL_SMTP_STARTTLS_ENABLE}
 
 server:
   port: ${SERVER_PORT}

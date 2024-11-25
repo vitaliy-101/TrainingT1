@@ -5,6 +5,7 @@ import com.example.trainingt1.aspect.LogHandlingDto;
 import com.example.trainingt1.dto.TaskDto;
 import com.example.trainingt1.dto.TaskDtoIn;
 import com.example.trainingt1.exceptions.NotFoundByIdException;
+import com.example.trainingt1.kafka.dto.TaskStatusDto;
 import com.example.trainingt1.mapper.TaskMapper;
 import com.example.trainingt1.service.TaskService;
 import lombok.RequiredArgsConstructor;
@@ -41,6 +42,11 @@ public class TaskController {
     public TaskDto updateTaskById(@PathVariable Long id,
                                   @RequestBody TaskDtoIn taskDtoIn) throws NotFoundByIdException {
         return taskMapper.convertTaskToDto(taskService.updateTaskById(id, taskMapper.convertToTaskEntity(taskDtoIn)));
+    }
+
+    @PutMapping("/status")
+    public void updateTaskStatuses(@RequestBody List<TaskStatusDto> taskStatusDtoList) {
+        taskStatusDtoList.forEach(taskService::sendNewTaskStatus);
     }
 
     @DeleteMapping("/{id}")
