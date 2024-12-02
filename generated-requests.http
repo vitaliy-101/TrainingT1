@@ -1,0 +1,181 @@
+### Запрос 1: Создание новой задачи (TaskDtoIn)
+POST http://localhost:8071/tasks
+Content-Type: application/json
+
+{
+  "title": "Task 1",
+  "description": "Description of Task 1",
+  "status": "OPENED",
+  "userId": 1
+}
+
+### Запрос 2: Создание новой задачи (TaskDtoIn)
+POST http://localhost:8071/tasks
+Content-Type: application/json
+
+{
+  "title": "Task 2",
+  "description": "Description of Task 2",
+  "status": "IN_PROGRESS",
+  "userId": 2
+}
+
+### Запрос 3: Создание новой задачи (TaskDtoIn)
+POST http://localhost:8071/tasks
+Content-Type: application/json
+
+{
+  "title": "Task 3",
+  "description": "Description of Task 3",
+  "status": "CLOSED",
+  "userId": 3
+}
+
+### Запрос 4: Создание новой задачи (TaskDtoIn)
+POST http://localhost:8071/tasks
+Content-Type: application/json
+
+{
+  "title": "Task 4",
+  "description": "Description of Task 4",
+  "status": "OPENED",
+  "userId": 4
+}
+
+### Запрос 5: Создание новой задачи (TaskDtoIn)
+POST http://localhost:8071/tasks
+Content-Type: application/json
+
+{
+  "title": "Task 5",
+  "description": "Description of Task 5",
+  "status": "IN_PROGRESS",
+  "userId": 5
+}
+
+### Запрос 6: Создание новой задачи (TaskDtoIn)
+POST http://localhost:8071/tasks
+Content-Type: application/json
+
+{
+  "title": "Task 6",
+  "description": "Description of Task 6",
+  "status": "CLOSED",
+  "userId": 6
+}
+
+### Запрос 7: Создание новой задачи (TaskDtoIn)
+POST http://localhost:8071/tasks
+Content-Type: application/json
+
+{
+  "title": "Task 7",
+  "description": "Description of Task 7",
+  "status": "OPENED",
+  "userId": 7
+}
+
+### Запрос 8: Создание новой задачи (TaskDtoIn)
+POST http://localhost:8071/tasks
+Content-Type: application/json
+
+{
+  "title": "Task 8",
+  "description": "Description of Task 8",
+  "status": "IN_PROGRESS",
+  "userId": 8
+}
+
+### Запрос 9: Создание новой задачи (TaskDtoIn)
+POST http://localhost:8071/tasks
+Content-Type: application/json
+
+{
+  "title": "Task 9",
+  "description": "Description of Task 9",
+  "status": "CLOSED",
+  "userId": 9
+}
+
+### Запрос 10: Создание новой задачи (TaskDtoIn)
+POST http://localhost:8071/tasks
+Content-Type: application/json
+
+{
+  "title": "Task 10",
+  "description": "Description of Task 10",
+  "status": "OPENED",
+  "userId": 10
+}
+
+
+### Запрос 11: Обновление статуса задачи (TaskStatusDto) - 1 объект
+PUT http://localhost:8071/tasks/status
+Content-Type: application/json
+
+[
+  {
+    "id": 1,
+    "status": "IN_PROGRESS"
+  }
+]
+
+### Запрос 12: Обновление статуса задачи (TaskStatusDto) - 2 объекта
+PUT http://localhost:8071/tasks/status
+Content-Type: application/json
+
+[
+  {
+    "id": 2,
+    "status": "CLOSED"
+  },
+  {
+    "id": 3,
+    "status": "OPENED"
+  }
+]
+
+### Запрос 13: Обновление статуса задачи (TaskStatusDto) - 3 объекта
+PUT http://localhost:8071/tasks/status
+Content-Type: application/json
+
+[
+  {
+    "id": 4,
+    "status": "IN_PROGRESS"
+  },
+  {
+    "id": 5,
+    "status": "OPENED"
+  },
+  {
+    "id": 6,
+    "status": "CLOSED"
+  }
+]
+
+### Запрос 14: Обновление статуса задачи (TaskStatusDto) - 1 объект
+PUT http://localhost:8071/tasks/status
+Content-Type: application/json
+
+[
+  {
+    "id": 7,
+    "status": "IN_PROGRESS"
+  }
+]
+
+### Запрос 15: Обновление статуса задачи (TaskStatusDto) - 2 объекта
+PUT http://localhost:8071/tasks/status
+Content-Type: application/json
+
+[
+  {
+    "id": 8,
+    "status": "CLOSED"
+  },
+  {
+    "id": 9,
+    "status": "OPENED"
+  }
+]

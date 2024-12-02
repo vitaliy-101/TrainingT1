@@ -22,6 +22,11 @@ public class ProjectAspect {
         logger.info("Calling the end point with the name = '{}' in the class '{}'", joinPoint.getSignature().getName(), joinPoint.getSignature().getDeclaringType().getName());
     }
 
+    @Before("@annotation(LogBefore)")
+    public void logBeforeFunction(JoinPoint joinPoint) {
+        logger.info("Calling the method with the name = '{}' in the class '{}'", joinPoint.getSignature().getName(), joinPoint.getSignature().getDeclaringType().getName());
+    }
+
     @AfterThrowing(pointcut = "@annotation(LogException)", throwing = "exception")
     public void logAfterThrowing(JoinPoint joinPoint, Exception exception) {
         logger.error("Exception named '{}' occurred in a method named '{}' in the class '{}'", exception.getClass().getName(), joinPoint.getSignature().getName(), joinPoint.getSignature().getDeclaringType().getName());
