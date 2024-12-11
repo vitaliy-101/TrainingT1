@@ -11,6 +11,7 @@ import com.example.trainingt1.kafka.KafkaTaskStatusProducer;
 import com.example.trainingt1.kafka.dto.TaskStatusDto;
 import com.example.trainingt1.notification.NotificationService;
 import com.example.trainingt1.repository.TaskRepository;
+import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -75,7 +76,6 @@ public class TaskService {
         Task task = getTaskById(taskStatusDto.getId());
         task.setStatus(taskStatusDto.getStatus());
         return taskRepository.save(task);
-
     }
 
     public void sendNewTaskStatus(TaskStatusDto taskStatusDto) {
