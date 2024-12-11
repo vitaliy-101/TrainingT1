@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: T1
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:127.0.0.1:5433}/test
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: 007787898
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    database: postgresql
+    hibernate:
+      ddl-auto: create
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: t1-training
+      max-poll-records: 15
+    topic:
+      updating_tasks: updating_tasks
+    listener:
+      poll-timeout: 1000
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: example@gmail.com
+    password: password
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+security:
+  token: a2JtdgZqhy-7_-Lp3dghvbyH7gfOPbQ-ksKj4-5lfU7Lw4lUjF3DhLcvADJZV7y7MQ
+  expiration: 86400000
+
+server:
+  port: 8071
