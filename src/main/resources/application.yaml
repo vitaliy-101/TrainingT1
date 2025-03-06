@@ -33,5 +33,9 @@ spring:
           starttls:
             enable: ${MAIL_PROPERTIES_MAIL_SMTP_STARTTLS_ENABLE}
 
+security:
+  token: a2JtdgZqhy-7_-Lp3dghvbyH7gfOPbQ-ksKj4-5lfU7Lw4lUjF3DhLcvADJZV7y7MQ
+  expiration: 86400000
+
 server:
   port: ${SERVER_PORT}
